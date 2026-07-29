@@ -181,77 +181,77 @@ body {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid var(--glass-border);
-  padding: 54px 44px;
-  border-radius: 32px;
-  max-width: 480px;
+  padding: 40px 32px;
+  border-radius: 28px;
+  max-width: 420px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 50px rgba(166, 123, 91, 0.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 50px rgba(16, 185, 129, 0.03);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .glass-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: var(--glass-border-hover);
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 0 60px rgba(220, 193, 170, 0.15);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 0 60px rgba(16, 185, 129, 0.10);
 }
 
 .warning-icon {
-  font-size: 52px;
-  margin-bottom: 24px;
-  filter: drop-shadow(0 0 12px rgba(166, 123, 91, 0.3));
+  font-size: 42px;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.3));
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .glass-card:hover .warning-icon {
-  transform: scale(1.1) translateY(-4px);
+  transform: scale(1.1) translateY(-3px);
 }
 
 .error-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 900;
   color: var(--text-white);
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   text-transform: lowercase;
   letter-spacing: -0.6px;
 }
 
 .error-message {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-muted);
   text-align: center;
-  line-height: 22px;
-  margin-bottom: 36px;
+  line-height: 20px;
+  margin-bottom: 28px;
 }
 
 .qr-container {
   display: flex;
   align-items: center;
-  background-color: rgba(56, 34, 8, 0.25);
-  border: 1px solid rgba(220, 193, 170, 0.08);
-  padding: 18px;
-  border-radius: 20px;
+  background-color: rgba(6, 95, 70, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.08);
+  padding: 14px;
+  border-radius: 16px;
   width: 100%;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .glass-card:hover .qr-container {
-  background-color: rgba(56, 34, 8, 0.4);
-  border-color: rgba(220, 193, 170, 0.25);
+  background-color: rgba(6, 95, 70, 0.25);
+  border-color: rgba(16, 185, 129, 0.25);
   transform: scale(1.02);
 }
 
 .qr-simulated {
-  width: 80px;
-  height: 80px;
+  width: 68px;
+  height: 68px;
   background-color: var(--coffee-cream);
-  border-radius: 12px;
-  padding: 8px;
+  border-radius: 10px;
+  padding: 6px;
   position: relative;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   transition: transform 0.4s ease;
@@ -262,41 +262,41 @@ body {
 }
 
 .qr-eye {
-  width: 22px;
-  height: 22px;
-  border: 5px solid var(--bg-dark);
+  width: 18px;
+  height: 18px;
+  border: 4px solid var(--bg-dark);
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: 4px;
   position: absolute;
 }
 
-.eye-top-left { top: 8px; left: 8px; }
-.eye-top-right { top: 8px; right: 8px; }
-.eye-bottom-left { bottom: 8px; left: 8px; }
+.eye-top-left { top: 6px; left: 6px; }
+.eye-top-right { top: 6px; right: 6px; }
+.eye-bottom-left { bottom: 6px; left: 6px; }
 
 .qr-data-dots {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
-  width: 32px;
-  height: 32px;
+  bottom: 6px;
+  right: 6px;
+  width: 28px;
+  height: 28px;
   background-image: 
-    radial-gradient(var(--bg-dark) 2.2px, transparent 2.2px),
-    radial-gradient(var(--bg-dark) 2.2px, transparent 2.2px);
-  background-size: 8px 8px;
-  background-position: 0 0, 4px 4px;
+    radial-gradient(var(--bg-dark) 1.8px, transparent 1.8px),
+    radial-gradient(var(--bg-dark) 1.8px, transparent 1.8px);
+  background-size: 7px 7px;
+  background-position: 0 0, 3.5px 3.5px;
 }
 
 .qr-instructions {
   flex: 1;
-  margin-left: 20px;
+  margin-left: 16px;
 }
 
 .qr-instructions h3 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text-white);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   transition: color 0.3s ease;
 }
 
@@ -305,9 +305,9 @@ body {
 }
 
 .qr-instructions p {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-muted);
-  line-height: 16px;
+  line-height: 15px;
 }
 
 .dev-tip {
