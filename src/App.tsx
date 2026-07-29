@@ -17,10 +17,12 @@ function App() {
   return (
     <div className="app-container">
       <div className="aurora-bg">
-        <div className="aurora-blob red-blob"></div>
-        <div className="aurora-blob crimson-blob"></div>
-        <div className="aurora-blob dark-red-blob"></div>
-        <div className="aurora-blob violet-blob"></div>
+        <div className="aurora-blob morph-blob-1"></div>
+        <div className="aurora-blob morph-blob-2"></div>
+        <div className="steam-particle particle-1"></div>
+        <div className="steam-particle particle-2"></div>
+        <div className="steam-particle particle-3"></div>
+        <div className="steam-particle particle-4"></div>
       </div>
 
       {isMobile ? (
@@ -39,7 +41,7 @@ function App() {
             <p className="error-message">
               CoffeeWallet is designed as a native mobile experience. To explore the layout, please scan the QR code with your phone or adjust your browser viewport.
             </p>
-
+            
             <div className="qr-container">
               <div className="qr-simulated">
                 <div className="qr-eye eye-top-left"></div>
@@ -52,7 +54,7 @@ function App() {
                 <p>Point your camera to scan and test on your mobile device.</p>
               </div>
             </div>
-
+            
             <div className="dev-tip">
               <span>💡</span>
               <p>Press <kbd>F12</kbd> &gt; toggle device emulator &gt; reload to test.</p>
