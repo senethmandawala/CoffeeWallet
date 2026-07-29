@@ -19,8 +19,8 @@ function App() {
   return (
     <div className="app-container">
       <SoftAurora
-        color1="#382208"
-        color2="#dbc1aa"
+        color1="#2b1a08"
+        color2="#7f5539"
         brightness={1.1}
         speed={0.5}
         scale={1.2}
