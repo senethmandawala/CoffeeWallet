@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import logo from './assets/coffeewallet_logo.png';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -28,7 +29,7 @@ function App() {
       {isMobile ? (
         <div className="mobile-view animate-fade-in">
           <div className="center-content">
-            <span className="logo-emoji">☕</span>
+            <img src={logo} className="logo-image" alt="CoffeeWallet Logo" />
             <h1 className="brand-title">CoffeeWallet</h1>
             <div className="glow-bar"></div>
           </div>
