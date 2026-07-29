@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap');
 
 :root {
   --bg-dark: #050001;
@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-white);
   overflow: hidden;
@@ -128,6 +128,7 @@ body {
 }
 
 .brand-title {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 48px;
   font-weight: 900;
   color: var(--text-white);
@@ -199,6 +200,7 @@ body {
 }
 
 .error-title {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 28px;
   font-weight: 900;
   color: var(--text-white);
