@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import logo from './assets/coffeewallet_logo.png';
-import Iridescence from './Iridescence';
+import SoftAurora from './SoftAurora';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,11 +18,12 @@ function App() {
 
   return (
     <div className="app-container">
-      <Iridescence
-        color={[0.28, 0.18, 0.08]}
-        mouseReact
-        amplitude={0.15}
-        speed={0.8}
+      <SoftAurora
+        color1="#382208"
+        color2="#dbc1aa"
+        brightness={1.1}
+        speed={0.5}
+        scale={1.2}
       />
 
       {isMobile ? (
