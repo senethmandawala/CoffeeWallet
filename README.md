@@ -1,50 +1,26 @@
-# React + TypeScript + Vite
+# CoffeeWallet Mock Web Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, high-fidelity mock website for **CoffeeWallet** built using **React (Vite + TypeScript)** with custom CSS animations.
 
-Currently, two official plugins are available:
+## Project Details
+- **Mobile Viewport (< 768px)**: Renders a premium black-red themed branding page with the centered title **"CoffeeWallet"** in white.
+- **Desktop Viewport (>= 768px)**: Displays a clean restriction page stating **"only supported in mobile"** along with a mockup QR code for mobile scanning.
+- **Interactive Animations**:
+  - **Morphing Coffee Blobs**: Two overlapping, organic liquid blobs that morph dynamically and rotate to resemble swirling coffee.
+  - **Rising Steam Particles**: Translucent red particles floating from bottom to top to mimic steam rising from a hot drink.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to Run the App
 
-## Expanding the ESLint configuration
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Verification**:
+   - On desktop, you will see the **"only supported in mobile"** warning card.
+   - Press `F12` to open developer tools, toggle the mobile emulation device mode, and refresh or resize the window to view the centered **CoffeeWallet** mobile screen.
