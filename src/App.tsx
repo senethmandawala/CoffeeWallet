@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import logo from './assets/coffeewallet_logo.png';
-import DotField from './DotField';
+import { CoffeeScriptDark } from '@nimr0d/react-skill-icons-vite';
+import Plasma from './Plasma';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,25 +18,23 @@ function App() {
 
   return (
     <div className="app-container">
-      <DotField
-        dotRadius={1.5}
-        dotSpacing={14}
-        bulgeStrength={67}
-        glowRadius={160}
-        sparkle={false}
-        waveAmplitude={0}
-        cursorRadius={500}
-        cursorForce={0.1}
-        bulgeOnly
-        gradientFrom="#a67b5b"
-        gradientTo="#382208"
-        glowColor="#1a1107"
+      <Plasma 
+        color="#10b981"
+        speed={0.4}
+        direction="forward"
+        scale={1.2}
+        opacity={0.85}
+        mouseInteractive={true}
+        renderScale={0.55}
+        maxDpr={1.5}
+        targetFps={60}
+        iterations={60}
       />
 
       {isMobile ? (
         <div className="mobile-view animate-fade-in">
           <div className="center-content">
-            <img src={logo} className="logo-image" alt="CoffeeWallet Logo" />
+            <CoffeeScriptDark className="logo-image" />
             <h1 className="brand-title">CoffeeWallet</h1>
             <div className="glow-bar"></div>
           </div>
