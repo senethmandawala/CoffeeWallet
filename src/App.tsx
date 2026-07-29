@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import logo from './assets/coffeewallet_logo.png';
-import SoftAurora from './SoftAurora';
+import DotField from './DotField';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,12 +18,19 @@ function App() {
 
   return (
     <div className="app-container">
-      <SoftAurora
-        color1="#2b1a08"
-        color2="#7f5539"
-        brightness={1.1}
-        speed={0.5}
-        scale={1.2}
+      <DotField
+        dotRadius={1.5}
+        dotSpacing={14}
+        bulgeStrength={67}
+        glowRadius={160}
+        sparkle={false}
+        waveAmplitude={0}
+        cursorRadius={500}
+        cursorForce={0.1}
+        bulgeOnly
+        gradientFrom="#a67b5b"
+        gradientTo="#382208"
+        glowColor="#1a1107"
       />
 
       {isMobile ? (
