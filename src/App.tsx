@@ -18,12 +18,10 @@ function App() {
   return (
     <div className="app-container">
       <div className="aurora-bg">
-        <div className="aurora-blob morph-blob-1"></div>
-        <div className="aurora-blob morph-blob-2"></div>
-        <div className="steam-particle particle-1"></div>
-        <div className="steam-particle particle-2"></div>
-        <div className="steam-particle particle-3"></div>
-        <div className="steam-particle particle-4"></div>
+        <div className="swirl-ring swirl-1"></div>
+        <div className="swirl-ring swirl-2"></div>
+        <div className="swirl-ring swirl-3"></div>
+        <div className="swirl-ring swirl-4"></div>
       </div>
 
       {isMobile ? (
