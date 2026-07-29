@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import logo from './assets/coffeewallet_logo.png';
+import Iridescence from './Iridescence';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -17,12 +18,12 @@ function App() {
 
   return (
     <div className="app-container">
-      <div className="aurora-bg">
-        <div className="swirl-ring swirl-1"></div>
-        <div className="swirl-ring swirl-2"></div>
-        <div className="swirl-ring swirl-3"></div>
-        <div className="swirl-ring swirl-4"></div>
-      </div>
+      <Iridescence
+        color={[0.27, 0.37, 0.20]}
+        mouseReact
+        amplitude={0.15}
+        speed={0.8}
+      />
 
       {isMobile ? (
         <div className="mobile-view animate-fade-in">
