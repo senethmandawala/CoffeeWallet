@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="app-container">
       <Iridescence
-        color={[0.27, 0.37, 0.20]}
+        color={[0.28, 0.18, 0.08]}
         mouseReact
         amplitude={0.15}
         speed={0.8}
