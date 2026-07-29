@@ -18,8 +18,8 @@ function App() {
 
   return (
     <div className="app-container">
-      <Plasma 
-        color="#10b981"
+      <Plasma
+        color="#065f46"
         speed={0.4}
         direction="forward"
         scale={1.2}
@@ -47,7 +47,7 @@ function App() {
             <p className="error-message">
               CoffeeWallet is designed as a native mobile experience. To explore the layout, please scan the QR code with your phone or adjust your browser viewport.
             </p>
-            
+
             <div className="qr-container">
               <div className="qr-simulated">
                 <div className="qr-eye eye-top-left"></div>
@@ -60,7 +60,7 @@ function App() {
                 <p>Point your camera to scan and test on your mobile device.</p>
               </div>
             </div>
-            
+
             <div className="dev-tip">
               <span>💡</span>
               <p>Press <kbd>F12</kbd> &gt; toggle device emulator &gt; reload to test.</p>
