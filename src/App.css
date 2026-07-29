@@ -246,45 +246,28 @@ body {
   transform: scale(1.02);
 }
 
-.qr-simulated {
+.qr-simulated-wrapper {
   width: 68px;
   height: 68px;
-  background-color: var(--coffee-cream);
+  background-color: #ffffff;
   border-radius: 10px;
-  padding: 6px;
-  position: relative;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   transition: transform 0.4s ease;
 }
 
-.glass-card:hover .qr-simulated {
+.glass-card:hover .qr-simulated-wrapper {
   transform: scale(1.05);
 }
 
-.qr-eye {
-  width: 18px;
-  height: 18px;
-  border: 4px solid var(--bg-dark);
-  background-color: transparent;
-  border-radius: 4px;
-  position: absolute;
-}
-
-.eye-top-left { top: 6px; left: 6px; }
-.eye-top-right { top: 6px; right: 6px; }
-.eye-bottom-left { bottom: 6px; left: 6px; }
-
-.qr-data-dots {
-  position: absolute;
-  bottom: 6px;
-  right: 6px;
-  width: 28px;
-  height: 28px;
-  background-image: 
-    radial-gradient(var(--bg-dark) 1.8px, transparent 1.8px),
-    radial-gradient(var(--bg-dark) 1.8px, transparent 1.8px);
-  background-size: 7px 7px;
-  background-position: 0 0, 3.5px 3.5px;
+.qr-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
 
 .qr-instructions {
