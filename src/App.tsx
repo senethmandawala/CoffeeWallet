@@ -2,9 +2,15 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import { CoffeeScriptDark } from '@nimr0d/react-skill-icons-vite';
 import Plasma from './Plasma';
+import LoginPage from './LoginPage';
+import Dashboard from './Dashboard';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem('coffeewallet_is_logged_in') === 'true'
+  );
 
   useEffect(() => {
     const checkViewport = () => {
@@ -15,6 +21,25 @@ function App() {
     window.addEventListener('resize', checkViewport);
     return () => window.removeEventListener('resize', checkViewport);
   }, []);
+
+  // Splash screen transition timer
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, 2200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true);
+    localStorage.setItem('coffeewallet_is_logged_in', 'true');
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem('coffeewallet_is_logged_in');
+    localStorage.removeItem('coffeewallet_user_email');
+  };
 
   return (
     <div className="app-container">
@@ -33,11 +58,17 @@ function App() {
 
       {isMobile ? (
         <div className="mobile-view animate-fade-in">
-          <div className="center-content">
-            <CoffeeScriptDark className="logo-image" />
-            <h1 className="brand-title">CoffeeWallet</h1>
-            <div className="glow-bar"></div>
-          </div>
+          {showSplash ? (
+            <div className="center-content">
+              <CoffeeScriptDark className="logo-image" />
+              <h1 className="brand-title">CoffeeWallet</h1>
+              <div className="glow-bar"></div>
+            </div>
+          ) : isLoggedIn ? (
+            <Dashboard onLogout={handleLogout} />
+          ) : (
+            <LoginPage onLoginSuccess={handleLoginSuccess} />
+          )}
         </div>
       ) : (
         <div className="desktop-view animate-fade-in">
